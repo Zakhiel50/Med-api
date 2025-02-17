@@ -14,16 +14,15 @@ db.sequelize.sync().then(() => {
 
 // Define routes here
 const patientRoutes = require('./routes/Patients');
-app.use('/Patients', patientRoutes);
+app.use('/patients', patientRoutes);
 
 const praticienRoutes = require('./routes/Praticiens');
-app.use('/Praticiens', praticienRoutes);
+app.use('/praticiens', praticienRoutes);
 
 const rdvRoutes = require('./routes/RendezVous');
-app.use('/RendezVous', rdvRoutes);
-
+app.use('/rendezVous', rdvRoutes);
 const factureRoutes = require('./routes/Factures');
-app.use('/Factures', factureRoutes);
+app.use('/factures', factureRoutes);
 
 
 

@@ -27,9 +27,10 @@ module.exports = (sequelize, DataTypes) => {
         createdAt: {
           type: DataTypes.DATE,
           allowNull: false
-        },
+        }
     }, {
-      tableName: 'Patients'
+      tableName: 'Patients',
+      updatedAt: false
     })
     Patient.associate = (models) => {
       Patient.hasMany(models.Facture, { foreignKey: 'patientId', as: 'factures' });
